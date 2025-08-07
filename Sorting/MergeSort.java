@@ -52,7 +52,7 @@ public class MergeSort {
         }
     }
     public static void main(String[] args) {
-        int arr[]={5,4,7,1,3,9};
+        int arr[]={5,1,3,2,4,8,9,23,14};
         int n=arr.length;
         int st=0;
         int end=n-1;
