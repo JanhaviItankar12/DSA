@@ -6,7 +6,7 @@ public class quickSort {
         int pivot=arr[end];
 
         for(int j=st;j<end;j++){
-            if(arr[j]>pivot){
+            if(arr[j]<pivot){
                 idx++;
                 
                 // swap
