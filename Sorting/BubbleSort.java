@@ -2,11 +2,11 @@
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int arr[]={0,1,2,0,1,2};
+        int arr[]={0,1,2,0,1,2,7,8,9,0};
         int n=arr.length;
         
         // O(n^2)qq
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
                 if(arr[i]>arr[j]){
                   int temp=arr[i];
