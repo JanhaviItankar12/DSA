@@ -35,6 +35,8 @@ public class MinimumSmallestKProductOfTwoSortedArrays {
             st=a[0]*b[n-1];
             end=a[n-1]*b[0];
 
+
+            
         }
         else if(a[0]>0 && b[0]<0){
            st=a[n-1]*b[0];
