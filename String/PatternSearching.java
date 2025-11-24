@@ -2,58 +2,8 @@
 import java.util.ArrayList;
 
 public class PatternSearching {
-    public static void main(String[] args) {
-        // String s="abesdu";
-        // String p="esdu";
-        // int l1=s.length();
-        // int l2=p.length();
-        // int i=0;
-        // int j=0;
-        // boolean foundPattern=false;
-        // ArrayList<Integer> result=new ArrayList<>();
-        
-        // // O(n*m)
-        // while((i>=0 && i<l1) || (j>=0 && j<l2)){
-           
-           
-        //     if(s.charAt(i)==p.charAt(j)){
-        //         foundPattern=true;
-        //         if(j==(l2-1) && foundPattern==true){
-        //             result.add(i-j);
-        //            if(i==l1-1){
-        //              break;
-        //            }
-        //            else{
-        //             j=0;
-        //            }
-        //         }
-        //        else{
-                
-        //         i++;
-        //         j++;
-        //        }
-               
-        //     }
-        //     else{
-        //         i = i - j + 1;
-        //         j=0;
-        //         foundPattern=false;
-        //     }
-        // }
 
-        // // If match ends at the very end
-        //    if (j == l2 && foundPattern) {
-        //      result.add(i - j);
-        //     }
-
-        // System.out.println(result);
-
-        
-
-         // optimal -approach
-
-         String s="pqpqpqr";
-         String p="pqpq";
+    static ArrayList<Integer> optimal(String s,String p){
          ArrayList<Integer> result=new ArrayList<>();
 
          int n=s.length();
@@ -86,8 +36,8 @@ public class PatternSearching {
                 }
             }
          }
-
-         System.out.println(result);
+       
+         return result;
         
     }
 
@@ -117,8 +67,42 @@ public class PatternSearching {
          return lps;
     }
 
-   
+    static ArrayList<Integer> bruteForce(String s,String p){
+        ArrayList<Integer> res=new ArrayList<>();
 
+
+        int i=0;
+        int j=p.length()-1;
+        StringBuilder s1=new StringBuilder();
+        StringBuilder s2=new StringBuilder();
+        int ans=0;
+        while(i<p.length()-1 && j>0){
+           s1.append(p.charAt(i));
+           s2.append(p.charAt(j));
+           if(s1==s2.reverse()){
+             ans++;
+           }
+           i--;
+           j++;
+        }
+
+        System.out.println(ans);
+        return res;
+        
+    }
+    
+    public static void main(String[] args) {
+
+         String s="pqpqpqr";
+         String p="pqpq";
+         ArrayList<Integer> list=new ArrayList<>();
+        
+         
+         // optimal -approach
+        list=optimal(s,p);
+
+        
+    }
 
    
     
