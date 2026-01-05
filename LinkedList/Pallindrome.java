@@ -1,6 +1,7 @@
 package LinkedList;
 
-class Node{
+
+    class Node{
     int data;
     Node next;
 
@@ -141,22 +142,77 @@ class LinkedList{
     }
 
 
+    //palindrome
+    public Boolean pallindromecheck(){
+
+      //step1:find middle element
+      
+      Node slow=head;
+      Node fast=head;
+
+      while(fast!=null && fast.next!=null){
+          slow=slow.next;
+          fast=fast.next.next;
+      }
+
+      
+
+      //step2: rev second half
+      Node prev=null;
+      Node next=null;
+      Node curr=slow;
+
+      while(curr!=null){
+         next=curr.next;
+         curr.next=prev;
+         prev=curr;
+         curr=next;
+      }
+      
+      //step3:check pallindrome
+      Node left=head;
+      Node right=prev;
+      while(right!=null){
+
+          if(left.data!=right.data){
+            return false;
+          }
+          left=left.next;
+          right=right.next;
+      }
+
+      return true;
+
+
+
+
+    }
+
+
 }
-public class CreationLinkedList {
-    public static void main(String[] args){
+
+public class Pallindrome{
+public static void main(String[] args){
         LinkedList ll1=new LinkedList();
 
-        ll1.insertAthead(10);
-        // ll1.inserAtend(90);
-        // ll1.inserAtend(80);
-        // ll1.insertAtpos(20, 1);
+        ll1.insertAthead(1);
+        ll1.inserAtend(2);
+        ll1.inserAtend(1);
+        
 
-        ll1.printList();
+        // ll1.printList();
 
-        ll1.search(10);
+        Boolean res=ll1.pallindromecheck();
+        System.out.println(res);
+
+
+       
 
 
     }
 
     
 }
+
+
+
