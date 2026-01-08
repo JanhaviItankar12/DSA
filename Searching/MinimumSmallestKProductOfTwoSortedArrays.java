@@ -54,9 +54,9 @@ public class MinimumSmallestKProductOfTwoSortedArrays {
         while(st<=end){
            int mid=st+(end-st)/2;
 
-           if(possibleAns(mid)){
-             ans=mid;
-           }
+        //    if(possibleAns(mid)){
+        //      ans=mid;
+        //    }
         }
 
     }

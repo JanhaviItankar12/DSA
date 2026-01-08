@@ -8,11 +8,11 @@ public class RhymeWord {
         int k=Math.min(3,word.length());
         String sufix=word.substring(word.length()-k);
         
-        for(int i=0;i<rhymeArr.length;i++){
-            for(int j=rhymeArr[i]-1;j>=sufix.length();j--){
+        // for(int i=0;i<rhymeArr.length;i++){
+        //     for(int j=rhymeArr[i]-1;j>=sufix.length();j--){
 
-            }
-        }
+        //     }
+        // }
 
     }
 }
