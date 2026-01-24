@@ -1,8 +1,8 @@
 
-
 public class LongestPallindrome {
     public static void main(String[] args) {
         String s="abacac";
+        
         int n=s.length();
         
 
@@ -63,7 +63,7 @@ public class LongestPallindrome {
         System.out.println(s1);
 
 
-
+       
 
 
 
