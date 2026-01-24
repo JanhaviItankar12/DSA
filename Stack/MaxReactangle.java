@@ -85,7 +85,7 @@ public class MaxReactangle {
 
         for(int i=0;i<row;i++){
 
-            int arr[]=new int[row];
+            int arr[]=new int[col];
             for(int j=0;j<col;j++){
                arr[j]=mat[i][j];
             }
