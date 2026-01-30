@@ -1,4 +1,3 @@
-
 class Node{
     int data;
     Node next;
@@ -18,12 +17,13 @@ public class Josephus {
     Node head=new Node(1);
 
     Node curr=head;
-    for(int i=2;i<=k;i++){
+    for(int i=2;i<=n;i++){
         Node newNode=new Node(i);
         curr.next=newNode;
         curr=newNode;
     }
-
+    
+    curr.next=head;
     Node prev=curr;
     curr=head;
 
