@@ -23,8 +23,9 @@ public class PaintHouse4{
         int pairs=n/2;
 
         long prev[][]=new long[k][k];
-
-
+        
+        
+        //base case
         //provide color to first pair  -(i and n-1-i)
         for(int c1=0;c1<k;c1++){
             for(int c2=0;c2<k;c2++){
@@ -47,7 +48,7 @@ public class PaintHouse4{
                 for(int c2=0;c2<k;c2++){
                     
                     if(c1==c2){
-                        curr[c1][c2]=Integer.MAX_VALUE;
+                        curr[c1][c2]=Integer.MAX_VALUE;    //same-color-mirror
                         continue;
                     }
 
@@ -55,7 +56,7 @@ public class PaintHouse4{
 
                     for(int p1=0;p1<k;p1++){
                         for(int p2=0;p2<k;p2++){
-                            if(p1==p2){  
+                            if(p1==p2){    //same mirror-color 
                                 continue;
                             }
                             if(p1!=c1 && p2!=c2){  //not adjacent houses are having same color

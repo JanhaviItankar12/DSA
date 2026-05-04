@@ -20,6 +20,8 @@ public class PaintHouse1 {
         for(int i=1;i<n;i++){
 
             //red color
+
+            
              currRed=cost[i][0]+Math.min(prevBlue,prevGreen);
 
             //blue color
