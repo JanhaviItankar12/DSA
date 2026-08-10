@@ -16,5 +16,7 @@ public class RodCuttingProblem {
         }
 
         System.out.println("Maximum Profit after rod cutting: "+dp[n]);
+
+        int a=Math.
     }
 }

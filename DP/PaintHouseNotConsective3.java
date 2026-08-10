@@ -20,7 +20,7 @@ public class PaintHouseNotConsective3 {
 
         for(int i=1;i<n;i++){
             for(int j=0;j<k;j++){
-
+'[/'
                 //same color
                 dp[i][j][2]=dp[i-1][j][1]+cost[i][j];
 

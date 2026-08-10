@@ -4,7 +4,7 @@ public class MatrixChain{
         int dp[][]=new int[n][n];
 
         for(int gap=2;gap<n;gap++){
-            for(int i=1;i<=n-gap;i++){
+            for(int i=1;i<n-gap+1;i++){
                 int j=i+gap-1;
                 dp[i][j]=Integer.MAX_VALUE;
 
