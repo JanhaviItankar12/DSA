@@ -56,6 +56,11 @@ public class PaintHouse2 {
         };
 
         int k=cost[0].length;
+
+        if (k==1 && cost.length>1){
+           System.out.println(-1);
+           return;
+        }
          
         int n=cost.length;
         int dp[][]=new int [n][k];
